@@ -23,13 +23,12 @@ StickyFooter.prototype = ( {
     }
 } );
 
-var StickTheFooter = new StickyFooter(
-        {
-            footer : document.getElementById( "footer-container" )
-        }
-);
-
-
 [ 'load', 'resize', 'orientationChange' ].map( function ( e ) {
+    var StickTheFooter = new StickyFooter(
+            {
+                footer : document.getElementById( "footer-container" )
+            }
+    );
+
     window.addEventListener( e, StickTheFooter.positionFooter.bind( StickTheFooter ) );
 } );
