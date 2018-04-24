@@ -15,9 +15,7 @@ function StickyFooter( args ) {
 
 StickyFooter.prototype = ( {
     constructor : StickyFooter,
-    logIt : function ( e ) {
-        console.log( e.type );
-    },
+    
     positionFooter : function () {
         if ( this.height > 0 ) {
             this.footer.style.marginTop = this.height + 'px';
