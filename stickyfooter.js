@@ -19,7 +19,9 @@ StickyFooter.prototype = ( {
         console.log( e.type );
     },
     positionFooter : function () {
-        this.footer.style.marginTop = this.height + 'px';
+        if ( this.height > 0 ) {
+            this.footer.style.marginTop = this.height + 'px';
+        }
     }
 } );
 
